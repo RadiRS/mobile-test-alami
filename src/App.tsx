@@ -1,32 +1,32 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, ScrollView} from 'react-native';
 
 import Cart from './features/carts';
 import DeviceId from './features/device-id';
+import ProgressBar from './features/progress-bar';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.contentContainer}>
+      <ScrollView style={styles.contentContainer}>
         <Text style={styles.title}>Mobile Test ALAMI</Text>
         <DeviceId />
         <Cart />
-      </View>
+        <ProgressBar />
+      </ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
     flex: 1,
   },
   contentContainer: {
     padding: 16,
   },
   title: {
-    fontSize: 30,
+    fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
   },

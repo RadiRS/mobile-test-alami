@@ -44,9 +44,13 @@ const Cart: React.FC = () => {
     setCarts(newCarts);
   };
 
+  const totalCurrentItemInCart = (item: Item) => {
+    return carts.filter(cart => cart.item.id === item.id).length;
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Cart:</Text>
+      <Text style={styles.title}>Cart</Text>
       <View style={styles.itemContainer}>
         {items.map(item => (
           <View key={item.id} style={styles.item}>
@@ -54,17 +58,15 @@ const Cart: React.FC = () => {
             <Text>Rp {item.price}</Text>
             <View style={styles.btnItemWrapper}>
               <Button title="-" onPress={() => onPressRemoveItem(item)} />
-              <Text>
-                {carts.filter(cart => cart.item.id === item.id).length}
-              </Text>
+              <Text>{totalCurrentItemInCart(item)}</Text>
               <Button title="+" onPress={() => onPressAddItem(item)} />
             </View>
           </View>
         ))}
       </View>
       <Pressable style={styles.cart}>
-        <Text style={styles.bold}>Total Item : {totalItemsInCart}</Text>
         <Text style={styles.bold}>Total Price : Rp {totalPrice}</Text>
+        <Text style={styles.bold}>Total Item : {totalItemsInCart}</Text>
       </Pressable>
     </View>
   );
@@ -72,7 +74,7 @@ const Cart: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 18,
+    marginBottom: 24,
   },
   itemContainer: {
     flexDirection: 'row',
@@ -106,8 +108,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   cart: {
-    marginLeft: 'auto',
-    marginRight: 8,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginTop: 8,
     padding: 16,
     borderRadius: 8,

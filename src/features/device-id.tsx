@@ -6,20 +6,20 @@ const DeviceID: React.FC = () => {
 
   return (
     <View style={styles.deviceIdContainer}>
-      <Text style={styles.title}>Device ID:</Text>
+      <Text style={styles.title}>Device ID</Text>
       <Text>{deviceId}</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  deviceIdContainer: {
+    marginBottom: 24,
+  },
   title: {
     fontSize: 18,
     marginBottom: 8,
     fontWeight: 'bold',
-  },
-  deviceIdContainer: {
-    marginBottom: 18,
   },
 });
 
