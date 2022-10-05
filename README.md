@@ -45,6 +45,14 @@ yarn ios       //ios
 
 <p>&nbsp;</p>
 
+## Features
+
+- Native Modules to get device id
+- Implemented react hooks
+- Custom progress bar component
+
+<p>&nbsp;</p>
+
 ## Built With
 
 - [React Native](https://facebook.github.io/react-native) - Learn once, write anywhere.
