@@ -56,7 +56,7 @@ yarn ios       //ios
 ## Built With
 
 - [Typescript](https://www.typescriptlang.org/) - JavaScript with syntax for types.
-- [React Native](https://facebook.github.io/react-native) - Learn once, write anywhere.
+- [React Native](https://facebook.github.io/react-native) - Javascript framework to build mobile application.
 
 <p>&nbsp;</p>
 
