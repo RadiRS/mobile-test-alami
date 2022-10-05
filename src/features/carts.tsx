@@ -55,11 +55,13 @@ const Cart: React.FC = () => {
         {items.map(item => (
           <View key={item.id} style={styles.item}>
             <Text style={styles.name}>{item.name}</Text>
-            <Text>Rp {item.price}</Text>
+            <Text style={styles.mb}>Rp {item.price}</Text>
             <View style={styles.btnItemWrapper}>
-              <Button title="-" onPress={() => onPressRemoveItem(item)} />
-              <Text>{totalCurrentItemInCart(item)}</Text>
-              <Button title="+" onPress={() => onPressAddItem(item)} />
+              <Button title=" - " onPress={() => onPressRemoveItem(item)} />
+              <Text style={styles.itemCountText}>
+                {totalCurrentItemInCart(item)}
+              </Text>
+              <Button title=" + " onPress={() => onPressAddItem(item)} />
             </View>
           </View>
         ))}
@@ -99,6 +101,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 8,
   },
+  itemCountText: {
+    marginHorizontal: 8,
+  },
   bold: {
     fontWeight: 'bold',
   },
@@ -114,6 +119,9 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 8,
     borderWidth: 1,
+  },
+  mb: {
+    marginBottom: 8,
   },
 });
 

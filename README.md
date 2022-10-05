@@ -1,0 +1,56 @@
+# ALAMI - Mobile Test
+
+This is a test application for ALAMI
+
+![banner](preview.gif)
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- [Yarn (Package Manager)](https://yarnpkg.com)
+
+- [Android Studio for Android Development](https://developer.android.com/studio)
+
+- [XCode for iOS Development](https://developer.apple.com/xcode/)
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+
+Clone the repository via http or ssh
+
+```
+git clone https://github.com/RadiRS/mobile-test-alami.git your_app_name
+```
+
+```
+git clone git@github.com:RadiRS/mobile-test-alami.git your_app_name
+```
+
+Enter into project directory and install all dependencies
+
+```
+cd your_app_name && yarn
+```
+
+Run the project via command line
+
+```
+yarn android   //android
+yarn ios       //ios
+```
+
+<p>&nbsp;</p>
+
+## Built With
+
+- [React Native](https://facebook.github.io/react-native) - Learn once, write anywhere.
+
+<p>&nbsp;</p>
+
+## Authors
+
+- **Radi Rusadi** - _Initial work_ - [RadiRS](https://github.com/RadiRS)
