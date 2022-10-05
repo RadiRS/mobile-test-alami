@@ -1,6 +1,6 @@
 # ALAMI - Mobile Test
 
-This is a test application for ALAMI
+This project was created for ALAMI Mobile Developer Entry Test.
 
 ![banner](preview.gif)
 
